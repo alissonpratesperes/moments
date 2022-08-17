@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const MomentSchema = new mongoose.Schema({
     author: String,
     place: String,

@@ -8,6 +8,8 @@ const Moment = require('../models/Moment');
 
                     await moment.save();
 
-                        return response.json(moment);
+                        request.io.emit('like', moment);
+
+                            return response.json(moment);
         }
     };

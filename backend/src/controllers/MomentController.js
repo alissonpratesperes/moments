@@ -1,7 +1,8 @@
-const Moment = require('../models/Moment');
 const sharp = require('sharp');
 const path = require('path');
 const fs = require('fs');
+
+const Moment = require('../models/Moment');
 
     module.exports = {
         async index(request, response) {
@@ -31,6 +32,8 @@ const fs = require('fs');
                 image: fileName
             });
 
-                        return response.json(moment);
+                        request.io.emit('moment', moment);
+
+                            return response.json(moment);
         }
     };
