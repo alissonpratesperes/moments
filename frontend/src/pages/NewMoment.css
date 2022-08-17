@@ -1,0 +1,33 @@
+form#new_moment {
+    margin: 30px auto 30px auto;
+    padding: 30px 30px 30px 30px;
+    width: 100%;
+    max-width: 580px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    flex-direction: column;
+}
+
+form#new_moment input {
+    margin-bottom: 20px;
+}
+
+form#new_moment input[type=text] {
+    padding: 0px 20px 0px 20px;
+    height: 38px;
+    font-size: 14px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+form#new_moment button {
+    padding: 10px 20px 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #000000;
+    border: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
