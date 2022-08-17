@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import like from '../assets/like.svg';
 import './MomentsFeed.css';
+import api from '../services/api';
 
     class MomentsFeed extends Component {
         render() {
