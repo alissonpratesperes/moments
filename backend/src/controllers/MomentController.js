@@ -1,4 +1,7 @@
 const Moment = require('../models/Moment');
+const sharp = require('sharp');
+const path = require('path');
+const fs = require('fs');
 
     module.exports = {
         async index(request, response) {
@@ -9,6 +12,15 @@ const Moment = require('../models/Moment');
         async store(request, response) {
             const { author, place, description, hashtags } = request.body;
             const { filename: image } = request.file;
+
+                await sharp(request.file.path).resize(500).jpeg({
+                    quality: 100
+                }).toFile(
+                    path.resolve(request.file.destination, 'resized', image)
+                )
+
+                    fs.unlinkSync(request.file.path);
+
             const moment = await Moment.create({
                 author,
                 place,
@@ -17,6 +29,6 @@ const Moment = require('../models/Moment');
                 image
             });
 
-                return response.json(moment);
+                        return response.json(moment);
         }
     };
