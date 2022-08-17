@@ -2,7 +2,9 @@ const Moment = require('../models/Moment');
 
     module.exports = {
         async index(request, response) {
+            const moments = await Moment.find().sort('-createdAt');
 
+                return response.json(moments);
         },
         async store(request, response) {
             const { author, place, description, hashtags } = request.body;
