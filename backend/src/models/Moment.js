@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const MomentSchema = new mongoose.Schema({
     author: String,
     place: String,
-    descrition: String,
+    description: String,
     hashtags: String,
     image: String,
     likes: {
@@ -10,7 +10,7 @@ const MomentSchema = new mongoose.Schema({
         default: 0
     }
 }, {
-    timeStamps: true
+    timestamps: true
 });
 
     module.exports = mongoose.model('Moment', MomentSchema);
