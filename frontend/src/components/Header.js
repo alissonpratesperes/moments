@@ -9,10 +9,10 @@ import './Header.css';
             <header id="main_header">
                 <div className="header_content">
                     <Link to="/">
-                        <h1 className="app_title"> Moments </h1>
+                        <h1 className="app_title">Moments</h1>
                     </Link>
                     <Link to="/new">
-                            <img src={ camera } />
+                            <img src={camera} alt="Enviar momento"/>
                     </Link>
                 </div>
             </header>
