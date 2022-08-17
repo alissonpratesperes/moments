@@ -10,3 +10,7 @@ body {
     font: 14px Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased !important;
 }
+
+a {
+    text-decoration: none;
+}
