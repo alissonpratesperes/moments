@@ -5,51 +5,45 @@ import './MomentsFeed.css';
 import api from '../services/api';
 
     class MomentsFeed extends Component {
-        render() {
-            return (
-                <section id="moments_list">
-                    <article>
-                        <header>
-                            <div className="user_info">
-                                <span>Alisson Prates Peres</span>
-                                <span className="place">São Marcos</span>
-                            </div>
-                        </header>
-                        <img src="http://localhost:3333/files/neverstoplearning.jpg" alt="Imagem do momento"/>
-                        <footer>
-                            <div className="moment_actions">
-                                <img src={ like } alt="Curtir este momento"/>
-                                    <strong>900 likes</strong>
-                            </div>
-                                
-                                    <p>
-                                        Um post muito massa da Semana Omnistack 7!
-                                            <span> #react #omnistack #top </span>    
-                                    </p>
-                        </footer>
-                    </article>
-                    <article>
-                        <header>
-                            <div className="user_info">
-                                <span>Alisson Prates Peres</span>
-                                <span className="place">São Marcos</span>
-                            </div>
-                        </header>
-                        <img src="http://localhost:3333/files/neverstoplearning.jpg" alt="Imagem do momento"/>
-                        <footer>
-                            <div className="moment_actions">
-                                <img src={ like } alt="Curtir este momento"/>
-                                    <strong>900 likes</strong>
-                            </div>
-                                <p>
-                                    Um post muito massa da Semana Omnistack 7!
-                                        <span> #react #omnistack #top </span>    
-                                </p>
-                        </footer>
-                    </article>
-                </section>
-            );
+        state = {
+            momentsFeed: []
         };
+
+            async componentDidMount() { 
+                const response = await api.get('moments');
+
+                    this.setState({
+                        momentsFeed: response.data
+                    });
+            }
+
+                render() {
+                    return (
+                        <section id="moments_list">
+                            { this.state.momentsFeed.map(moment => (
+                                <article key={moment._id}>
+                                    <header>
+                                        <div className="user_info">
+                                            <span>{moment.author}</span>
+                                            <span className="place">{moment.place}</span>
+                                        </div>
+                                    </header>
+                                    <img src={`http://localhost:3333/files/${moment.image}`} alt="Imagem do momento"/>
+                                    <footer>
+                                        <div className="moment_actions">
+                                            <img src={ like } alt="Curtir este momento"/>
+                                                <strong>{moment.likes} likes</strong>
+                                        </div>
+                                            <p>
+                                                {moment.description}
+                                                    <span>{moment.hashtags}</span>    
+                                            </p>
+                                    </footer>
+                                </article>
+                            )) }
+                        </section>
+                    );
+                };
     }
 
         export default MomentsFeed;
