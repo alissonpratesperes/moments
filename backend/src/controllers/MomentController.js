@@ -12,11 +12,13 @@ const fs = require('fs');
         async store(request, response) {
             const { author, place, description, hashtags } = request.body;
             const { filename: image } = request.file;
+            const [ name ] = image.split('.');
+            const fileName = `${name}.jpg`;
 
                 await sharp(request.file.path).resize(500).jpeg({
                     quality: 100
                 }).toFile(
-                    path.resolve(request.file.destination, 'resized', image)
+                    path.resolve(request.file.destination, 'resized', fileName)
                 )
 
                     fs.unlinkSync(request.file.path);
@@ -26,7 +28,7 @@ const fs = require('fs');
                 place,
                 description,
                 hashtags,
-                image
+                image: fileName
             });
 
                         return response.json(moment);
