@@ -8,15 +8,12 @@ import api from '../services/api';
         state = {
             momentsFeed: []
         };
-
             async componentDidMount() { 
                 const response = await api.get('moments');
-
                     this.setState({
                         momentsFeed: response.data
                     });
             }
-
                 render() {
                     return (
                         <section id="moments_list">
@@ -32,7 +29,7 @@ import api from '../services/api';
                                     <footer>
                                         <div className="moment_actions">
                                             <img src={ like } alt="Curtir este momento"/>
-                                                <strong>{moment.likes} likes</strong>
+                                                <strong>{moment.likes}</strong>
                                         </div>
                                             <p>
                                                 {moment.description}

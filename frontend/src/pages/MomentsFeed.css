@@ -1,5 +1,5 @@
 section#moments_list {
-    margin: 0px auto;
+    margin: 102px auto 0px auto;
     padding: 0px 30px 0px 30px;
     width: 100%;
     max-width: 580px;
@@ -9,6 +9,7 @@ section#moments_list article {
     margin-top: 30px;
     background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
+    border-radius: 10px;
 }
 
 section#moments_list article header {
@@ -25,12 +26,13 @@ section#moments_list article header div.user_info {
 }
 
 section#moments_list article header div.user_info span {
-    font-size: 13px;
+    font-size: 20px;
+    color: #000000;
 }
 
 section#moments_list article header div.user_info span.place {
-    margin-top: 3px;
-    font-size: 11px;
+    margin-top: 5px;
+    font-size: 15px;
     color: #666666;
 }
 
@@ -43,23 +45,29 @@ section#moments_list article footer {
 }
 
 section#moments_list article footer div.moment_actions {
-    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 section#moments_list article footer div.moment_actions img {
-    height: 20px;
+    height: 25px;
+}
+
+section#moments_list article footer div.moment_actions strong {
+    margin-left: 5px;
+    font-size: 15px;
+    color: #000000;
 }
 
 section#moments_list article footer p {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 20px;
+    color: #000000;
 }
 
 section#moments_list article footer p span {
+    margin-top: 5px;
     display: block;
     color: #666666;
 }

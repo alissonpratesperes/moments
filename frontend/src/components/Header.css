@@ -4,8 +4,12 @@
 }
 
     header#main_header {
+        position: fixed;
+        top: 0px;
         height: 72px;
-        background-color: #FFFFFF;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
         border-bottom: 1px solid #DDDDDD;
     }
 
@@ -21,8 +25,25 @@
         justify-content: space-between;
     }
 
-    header#main_header div.header_content h1.app_title {
+    header#main_header div.header_content div.brand {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header#main_header div.header_content div.brand img {
+        margin-right: 3px;
+        height: 50px;
+        width: 50px;
+    }
+
+    header#main_header div.header_content a h1.app_title {
         font-family: Fontspring;
+        font-size: 40px;
         font-weight: 400;
         color: #000000;
+    }
+    header#main_header div.header_content a img {
+        height: 30px;
     }
