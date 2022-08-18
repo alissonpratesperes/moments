@@ -51,6 +51,12 @@ section#moments_list article footer div.moment_actions {
     justify-content: flex-end;
 }
 
+section#moments_list article footer div.moment_actions button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 section#moments_list article footer div.moment_actions img {
     height: 25px;
 }
