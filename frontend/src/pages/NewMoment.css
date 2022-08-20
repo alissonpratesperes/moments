@@ -1,8 +1,8 @@
 form#new_moment {
-    margin: 102px auto 30px auto;
+    margin: 30px auto 30px auto;
     padding: 50px 50px 50px 50px;
     width: 100%;
-    max-width: 580px;
+    max-width: 520px;
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
@@ -23,11 +23,8 @@ form#new_moment input[type=text] {
     transition: all 0.15s ease-in-out;
 }
 
-form#new_moment input[type=text]:focus {
-    border: 1px solid #000000;
-}
-
 form#new_moment button {
+    margin-top: 20px;
     padding: 10px 20px 10px 20px;
     display: flex;
     flex-direction: row;

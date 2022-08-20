@@ -16,7 +16,7 @@ import './Header.css';
                         </div>
                     </Link>
                     <Link to="/new">
-                            <img src={camera} alt="Enviar momento"/>
+                        <img src={camera} alt="Enviar momento"/>
                     </Link>
                 </div>
             </header>

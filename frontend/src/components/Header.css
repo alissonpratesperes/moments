@@ -4,13 +4,8 @@
 }
 
     header#main_header {
-        position: fixed;
-        top: 0px;
         height: 72px;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(20px);
-        border-bottom: 1px solid #DDDDDD;
     }
 
     header#main_header div.header_content {
@@ -33,7 +28,7 @@
     }
 
     header#main_header div.header_content div.brand img {
-        margin-right: 3px;
+        margin-right: 2.2px;
         height: 50px;
         width: 50px;
     }
