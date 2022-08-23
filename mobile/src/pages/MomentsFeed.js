@@ -1,8 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { TouchableOpacity, Image, View } from 'react-native';
 
-export default function MomentsFeed() {
-  return (
-    <View/>
-  );
-}
+import camera from '../assets/camera.png';
+
+    export default class MomentsFeed extends Component {
+        static navigationOptions = ({ navigation }) => ({
+            headerRight: () => (
+                <TouchableOpacity style={{ marginRight: 20 }} onPress={ () => navigation.navigate('NewMoment') }>
+                    <Image source={ camera } />
+                </TouchableOpacity>
+            )
+        });
+
+            render() {
+                return <View/>
+            }
+    }

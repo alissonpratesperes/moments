@@ -1,8 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { View } from 'react-native';
 
-export default function NewMoment() {
-  return (
-    <View/>
-  );
-}
+    export default class NewMoment extends Component {
+        render() {
+            return <View/>
+        }
+    }
