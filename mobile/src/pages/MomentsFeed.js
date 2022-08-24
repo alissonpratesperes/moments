@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, TouchableOpacity, Image, View, FlatList, Text } from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
+import io from 'socket.io-client';
 
 import camera from '../assets/camera.png';
 import like from '../assets/like.png';
@@ -20,11 +21,29 @@ import api from '../services/api';
             };
 
                 async componentDidMount() {
-                    //this.registerToSocket();
+                    this.registerToSocket();
                         const response = await api.get('moments');
                             this.setState({
                                 momentsFeed: response.data
                             });
+                };
+                registerToSocket = () => {
+                    const socket = io('http://192.168.1.101:3333');
+                        socket.on('moment', newMoment => {
+                            this.setState({
+                                momentsFeed: [newMoment, ...this.state.momentsFeed]
+                            });
+                        });
+                        socket.on('like', likedMoment => {
+                            this.setState({
+                                momentsFeed: this.state.momentsFeed.map(moment =>
+                                    moment._id === likedMoment._id ? likedMoment : moment
+                                )
+                            });
+                        });
+                };
+                handleLike = id => {
+                    api.post(`moments/${id}/like`);
                 };
 
                     render() {
@@ -41,7 +60,7 @@ import api from '../services/api';
                                         <AutoHeightImage width={313} style={ styles.feedItemImage } source={{ uri: `http://192.168.1.101:3333/files/${item.image}` }}/>
                                         <View style={ styles.feedItemFooter }>
                                             <View style={ styles.feedItemActions }>
-                                                <TouchableOpacity onPress={ () => {} } >
+                                                <TouchableOpacity onPress={ () => this.handleLike(item._id) } >
                                                     <Image source={ like }/>
                                                 </TouchableOpacity>
                                                         <Text style={ styles.likes }> { item.likes } </Text>
