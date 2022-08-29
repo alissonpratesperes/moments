@@ -57,7 +57,7 @@ import api from '../services/api';
                                                 <Text style={ styles.place }> { item.place } </Text>
                                             </View>
                                         </View>
-                                        <AutoHeightImage width={313} style={ styles.feedItemImage } source={{ uri: `http://192.168.1.101:3333/files/${item.image}` }}/>
+                                        <AutoHeightImage width={313} source={{ uri: `http://192.168.1.101:3333/files/${item.image}` }}/>
                                         <View style={ styles.feedItemFooter }>
                                             <View style={ styles.feedItemActions }>
                                                 <TouchableOpacity onPress={ () => this.handleLike(item._id) } >
