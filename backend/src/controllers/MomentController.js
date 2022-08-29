@@ -19,7 +19,7 @@ const Moment = require('../models/Moment');
                 }).toFile(
                     path.resolve(request.file.destination, 'resized', fileName)
                 )
-                        fs.unlinkSync(request.file.path);
+                    fs.unlinkSync(request.file.path);
             const moment = await Moment.create({
                 author,
                 place,
@@ -27,7 +27,7 @@ const Moment = require('../models/Moment');
                 hashtags,
                 image: fileName
             });
-                            request.io.emit('moment', moment);
-                                return response.json(moment);
+                        request.io.emit('moment', moment);
+                            return response.json(moment);
         }
     };
