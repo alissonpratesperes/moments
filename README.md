@@ -21,7 +21,7 @@
 </p>
 <br/>
 
-
+<p align="center"> <img src="github/moments_dashboard.png" width="100%"> </p>
 
 ## :dart: Sobre
 A **Moments** é uma Aplicação inspirada no Instagram. Compartilhe seus melhores momentos e receba likes de quem visualizar, em tempo real, pelo Computador ou Smartphone.
