@@ -38,7 +38,20 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 - <a href="https://expo.dev/">Expo IO</a>
 - <a href="https://reactnative.dev/">React Native</a>
 
+## :electric_plug: Execute
 
+	- Clonar o Repositório;
+	- Instalar as Dependências do Back-End com o Comando: npm install;
+		>_ Inicializar o Back-End com o Comando: npm run dev;
+	- Instalar as Dependências do Front-End com o Comando: npm install;
+		|- Alterar o Endereço de Conexão da API em: "./frontend/src/services/api.js";
+		>_ Inicializar o Front-End com o Comando: npm start;
+	- Instalar as Dependências do Mobile com o Comando: npm install --force;
+		|- Alterar o Arquivo de Inicialização em: "./mobile/node_modules/expo/AppEntry.js" com: "../../src/index";
+		|- Alterar o Endereço de Conexão da API em: "./mobile/src/services/api.js";
+		|- Atualizar o Endereço da API do WebSocket em: "./mobile/src/pages/MomentsFeed.js", na linha: 31;
+		>_ Inicializar o Mobile com o Comando: expo start.
+		
 
 ## :fuelpump: Autor
 
