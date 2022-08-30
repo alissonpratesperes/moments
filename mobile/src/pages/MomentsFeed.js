@@ -111,6 +111,7 @@ import like from '../assets/like.png';
                 justifyContent: 'flex-end'
             },
             likes: {
+                marginLeft: 5,
                 fontWeight: 'bold'
             },
             description: {
