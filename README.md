@@ -37,3 +37,12 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 - <a href="https://axios-http.com/">Axios</a>
 - <a href="https://expo.dev/">Expo IO</a>
 - <a href="https://reactnative.dev/">React Native</a>
+
+
+## :memo: Licença
+
+Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://github.com/alissonpratesperes/moments/blob/main/LICENSE) para mais detalhes.
+
+---
+
+<h5 align="center">  ✍🏻&nbsp; &nbsp;na &nbsp;✋🏻&nbsp;  por <a href="https://github.com/alissonpratesperes"> Alisson Prates Peres </a> &nbsp;👨🏻‍💻 </h5>
