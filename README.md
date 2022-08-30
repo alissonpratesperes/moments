@@ -39,6 +39,11 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 - <a href="https://reactnative.dev/">React Native</a>
 
 
+
+## :fuelpump: Autor
+
+- Projeto desenvolvido durante a **Semana OmniStack 7** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Junho de 2019**.
+
 ## :memo: Licença
 
 Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://github.com/alissonpratesperes/moments/blob/main/LICENSE) para mais detalhes.
