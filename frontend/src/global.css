@@ -1,21 +1,18 @@
 ::-webkit-scrollbar { 
     display: none; 
 }
-
 * {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     outline: 0px;
     box-sizing: border-box;
 }
-
 body {
     padding-bottom: 30px;
     background-color: #FAFAFA;
     font: 14px Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased !important;
 }
-
 a {
     text-decoration: none;
 }

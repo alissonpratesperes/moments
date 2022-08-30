@@ -7,7 +7,6 @@
         height: 72px;
         width: 100%;
     }
-
     header#main_header div.header_content {
         margin: 0px auto 0px auto;
         padding: 0px 30px 0px 30px;
@@ -19,20 +18,17 @@
         align-items: center;
         justify-content: space-between;
     }
-
     header#main_header div.header_content div.brand {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
-
     header#main_header div.header_content div.brand img {
         margin-right: 2.2px;
         height: 50px;
         width: 50px;
     }
-
     header#main_header div.header_content a h1.app_title {
         font-family: Fontspring;
         font-size: 40px;

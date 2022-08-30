@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
+import api from '../services/api';
 import send from '../assets/send.svg';
 import './NewMoment.css';
-import api from '../services/api';
 
     class NewMoment extends Component {
         state = {
@@ -20,7 +20,7 @@ import api from '../services/api';
             };
             handleChange = event => {
                 this.setState({
-                    [ event.target.name ]: event.target.value
+                    [event.target.name]: event.target.value
                 });
             };
             handleSubmit = async event => {
@@ -45,28 +45,29 @@ import api from '../services/api';
                                 type="text"
                                 name="author"
                                 placeholder="Autor do momento"
-                                    onChange={this.handleChange}
                                     value={this.state.author}
+                                    onChange={this.handleChange}
                             />
                             <input
                                 type="text"
                                 name="place"
                                 placeholder="Local do momento"
-                                    onChange={this.handleChange}
                                     value={this.state.place}
+                                    onChange={this.handleChange}
                             />
                             <input
                                 type="text"
                                 name="description"
                                 placeholder="Descrição do momento"
-                                    onChange={this.handleChange}
                                     value={this.state.description}
+                                    onChange={this.handleChange}
                             />
                             <input
-                                type="text" name="hashtags"
+                                type="text"
+                                name="hashtags"
                                 placeholder="Hashtags do momento"
-                                    onChange={this.handleChange}
                                     value={this.state.hashtags}
+                                    onChange={this.handleChange}
                             />
                                 <button type="submit">
                                     <img src={send} alt="Cadastrar momento"/>

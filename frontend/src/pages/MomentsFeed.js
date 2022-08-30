@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import io from 'socket.io-client';
 
+import api from '../services/api';
 import like from '../assets/like.svg';
 import './MomentsFeed.css';
-import api from '../services/api';
 
     class MomentsFeed extends Component {
         state = {
@@ -39,7 +39,7 @@ import api from '../services/api';
                 render() {
                     return (
                         <section id="moments_list">
-                            { this.state.momentsFeed.map(moment => (
+                            {this.state.momentsFeed.map(moment => (
                                 <article key={moment._id}>
                                     <header>
                                         <div className="user_info">
@@ -51,7 +51,7 @@ import api from '../services/api';
                                     <footer>
                                         <div className="moment_actions">
                                             <button type="button" onClick={() => this.handleLike(moment._id)}>
-                                                <img src={ like } alt="Curtir este momento"/>
+                                                <img src={like} alt="Curtir este momento"/>
                                             </button>
                                                 <strong>{moment.likes}</strong>
                                         </div>
@@ -61,7 +61,7 @@ import api from '../services/api';
                                             </p>
                                     </footer>
                                 </article>
-                            )) }
+                            ))}
                         </section>
                     );
                 };

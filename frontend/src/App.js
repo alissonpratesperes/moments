@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 
 import Header from './components/Header';
 import Routes from './routes';
@@ -8,7 +8,7 @@ import Routes from './routes';
     return (
       <BrowserRouter>
         <Header/>
-        <Routes/>
+          <Routes/>
       </BrowserRouter>
     );
   }

@@ -4,14 +4,12 @@ section#moments_list {
     width: 100%;
     max-width: 580px;
 }
-
 section#moments_list article {
     margin-top: 30px;
     background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
     border-radius: 10px;
 }
-
 section#moments_list article header {
     padding: 20px 20px 20px 20px;
     display: flex;
@@ -19,59 +17,48 @@ section#moments_list article header {
     align-items: center;
     justify-content: flex-start;
 }
-
 section#moments_list article header div.user_info {
     display: flex;
     flex-direction: column;
 }
-
 section#moments_list article header div.user_info span {
     font-size: 20px;
     color: #000000;
 }
-
 section#moments_list article header div.user_info span.place {
     margin-top: 5px;
     font-size: 15px;
     color: #666666;
 }
-
 section#moments_list article > img {
     width: 100%;
 }
-
 section#moments_list article footer {
     padding: 20px 20px 20px 20px;
 }
-
 section#moments_list article footer div.moment_actions {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
 }
-
 section#moments_list article footer div.moment_actions button {
     background: transparent;
     border: none;
     cursor: pointer;
 }
-
 section#moments_list article footer div.moment_actions img {
     height: 25px;
 }
-
 section#moments_list article footer div.moment_actions strong {
     margin-left: 5px;
     font-size: 15px;
     color: #000000;
 }
-
 section#moments_list article footer p {
     font-size: 20px;
     color: #000000;
 }
-
 section#moments_list article footer p span {
     margin-top: 5px;
     display: block;
