@@ -5,8 +5,14 @@ const cors = require('cors');
 
 const app = express();
 const server = require('http').Server(app);
-const options = {cors: true, origins: ['*:*']};
-const io = require('socket.io')(server, options);
+const options = {
+    cors: true,
+        origins: ['*:*']
+};
+const io = require('socket.io')(
+    server,
+        options
+);
 
     mongoose.connect('mongodb+srv://omnistack_dev:KcAtSiNm0O@mavericks.pwlbv.mongodb.net/omnistack7', {
         useNewUrlParser: true
@@ -17,6 +23,23 @@ const io = require('socket.io')(server, options);
             next();
         });
         app.use(cors());
-        app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads', 'resized')));
-        app.use(require('./routes'));
-        server.listen(3333);
+        app.use(
+            '/files',
+                express.static(
+                    path.resolve(
+                        __dirname,
+                            '..',
+                                'uploads',
+                                    'resized'
+                    )
+                )
+        );
+        app.use(
+            require(
+                './routes'
+            )
+        );
+
+            server.listen(
+                3333
+            );

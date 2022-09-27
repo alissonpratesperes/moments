@@ -8,10 +8,13 @@ const MomentSchema = new mongoose.Schema({
     image: String,
     likes: {
         type: Number,
-        default: 0
+            default: 0
     }
 }, {
     timestamps: true
 });
 
-    module.exports = mongoose.model('Moment', MomentSchema);
+    module.exports = mongoose.model(
+        'Moment',
+            MomentSchema
+    );
