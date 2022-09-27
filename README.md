@@ -41,21 +41,25 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 ## :electric_plug: Execute
 
 	- Clonar o Repositório;
-	- Instalar as Dependências do Back-End com o Comando: npm install;
-		>_ Inicializar o Back-End com o Comando: npm run dev;
-	- Instalar as Dependências do Front-End com o Comando: npm install;
-		|- Alterar o Endereço de Conexão da API em: "./frontend/src/services/api.js";
-		>_ Inicializar o Front-End com o Comando: npm start;
-	- Instalar as Dependências do Mobile com o Comando: npm install --force;
-		|- Alterar o Arquivo de Inicialização em: "./mobile/node_modules/expo/AppEntry.js" com: "../../src/index";
-		|- Alterar o Endereço de Conexão da API em: "./mobile/src/services/api.js";
-		|- Atualizar o Endereço da API do WebSocket em: "./mobile/src/pages/MomentsFeed.js", na linha: 31;
-		>_ Inicializar o Mobile com o Comando: expo start.
+	- Instalar as Dependências do Back-End com o Comando: "npm install";
+		|- "./backend/src/index.js:17" - Verificar URL de conexão com o MongoDB;
+			>_ Inicializar o Back-End com o Comando: "npm run dev";
+	- Instalar as Dependências do Front-End com o Comando: "npm install";
+		|- "./frontend/src/pages/MomentsFeed.js:21" - Atualizar o Endereço de conexão dos WebSockets;
+		|- "./frontend/src/pages/MomentsFeed.js:50" - Atualizar o Endereço de conexão para as Imagens;
+		|- "./frontend/src/services/api.js:4" - Alterar o Endereço de Conexão do Front-End;
+			>_ Inicializar o Front-End com o Comando: "npm start";
+	- Instalar as Dependências do Mobile com o Comando: "npm install --force";
+		|- "./mobile/node_modules/expo/AppEntry.js:3" - Alterar o diretório de inicialização do Expo para : "../../src/index";
+		|- "./mobile/src/pages/MomentsFeed.js:31" - Atualizar o Endereço de conexão dos WebSockets;
+		|- "./mobile/src/pages/MomentsFeed.js:60" - Atualizar o Endereço de conexão para as Imagens;
+		|- "./mobile/src/services/api.js:4" - Alterar o Endereço de Conexão do Mobile;
+			>_ Inicializar o Mobile com o Comando: "expo start".
 		
 
 ## :fuelpump: Autor
 
-- Projeto desenvolvido durante a **Semana OmniStack 7** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Junho de 2019**.
+Projeto desenvolvido durante a **Semana OmniStack 7** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Junho de 2019**.
 
 ## :memo: Licença
 
@@ -63,4 +67,4 @@ Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://gith
 
 ---
 
-<h5 align="center">  ✍🏻&nbsp; &nbsp;na &nbsp;✋🏻&nbsp;  por <a href="https://github.com/alissonpratesperes"> Alisson Prates Peres </a> &nbsp;👨🏻‍💻 </h5>
+<h5 align="center">👨🏻‍💻&nbsp;com&nbsp;💜&nbsp;por&nbsp;<a href="https://github.com/alissonpratesperes">Alisson Prates Peres</a>&nbsp;✌🏻😗</h5>

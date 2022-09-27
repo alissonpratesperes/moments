@@ -18,7 +18,7 @@ import './MomentsFeed.css';
                         });
             };
             registerToSocket = () => {
-                const socket = io('http://localhost:3333');
+                const socket = io('http://192.168.1.101:3333');
                     socket.on('moment', newMoment => {
                         this.setState({
                             momentsFeed: [newMoment, ...this.state.momentsFeed]
@@ -47,7 +47,7 @@ import './MomentsFeed.css';
                                             <span className="place">{moment.place}</span>
                                         </div>
                                     </header>
-                                    <img src={`http://localhost:3333/files/${moment.image}`} alt="Imagem do momento"/>
+                                    <img src={`http://192.168.1.101:3333/files/${moment.image}`} alt="Imagem do momento"/>
                                     <footer>
                                         <div className="moment_actions">
                                             <button type="button" onClick={() => this.handleLike(moment._id)}>
