@@ -13,7 +13,7 @@ ___
 <br/>
 
 <p align="center">
-  <img src="./github/moments-dashboard.png" alt="rocketbox-dashboard" width="100%"/>
+  <img src="./github/moments-dashboard.png" alt="moments-dashboard" width="100%"/>
 </p>
 
 ## SOBRE
