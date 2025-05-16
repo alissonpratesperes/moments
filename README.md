@@ -35,7 +35,7 @@ A **moments** é uma Aplicação inspirada no Instagram, compartilhe seus melhor
   <summary><strong>Database</strong></summary>
 
   <ul>
-    <li><a href="https://mongodb.com/">MongoDB</a></li>
+    <li><a href="https://mongodb.com/">Mongo DB</a></li>
   </ul>
 </details>
 
